@@ -1,0 +1,119 @@
+Part 1: Relationships Between Classes
+
+Task 1: Association
+
+· Scenario: Create a Doctor class and a Patient class.
+
+· Requirement:
+
+o A doctor can have multiple patients, but a patient can have only one assigned doctor.
+
+o Implement a method get_patients() in Doctor to return a list of assigned patients.
+
+· Goal: Demonstrate a one-to-many association relationship.
+
+
+Task 2: Aggregation
+
+· Scenario: Create a Library class and a Book class.
+
+· Requirement:
+
+o A Library contains multiple Book objects, but books can exist independently outside of the library.
+
+o Implement a method add_book(Book book) to add books to the library.
+
+· Goal: Demonstrate aggregation, where a class contains objects that can exist independently.
+
+
+Task 3: Composition
+
+· Scenario: Create a Car class and an Engine class.
+
+· Requirement:
+
+o A car must have an engine, and an engine cannot exist without a car.
+
+o The Car class should create and initialize an Engine object inside its constructor.
+
+· Goal: Demonstrate composition, where one class controls the lifecycle of another.
+
+
+Task 4: Inheritance
+
+· Scenario: Create a base class Animal and two subclasses Dog and Cat.
+
+· Requirement:
+
+o The Animal class should have a method make_sound().
+
+o Dog should override make_sound() to return "Bark", and Cat should return "Meow".
+
+· Goal: Demonstrate inheritance where subclasses extend a base class.
+
+
+Part 2: SOLID Design Principles
+
+Task 5: Single Responsibility Principle (SRP)
+
+· Scenario: Create a Report class.
+
+· Requirement:
+
+o The class should have a method generate_report() for report generation.
+
+o Avoid adding file-saving logic inside Report. Instead, create a separate FileSaver class to handle file operations.
+
+· Goal: Ensure that each class has a single responsibility.
+
+
+Task 6: Open/Closed Principle (OCP)
+
+· Scenario: Create a Discount class that calculates discounts.
+
+· Requirement:
+
+o The base Discount class should have a method apply_discount().
+
+o Extend it with subclasses like StudentDiscount and SeniorDiscount without modifying the original Discount class.
+
+· Goal: Ensure that the class is open for extension but closed for modification.
+
+
+Task 7: Liskov Substitution Principle (LSP)
+
+· Scenario: Create a Bird class and two subclasses Sparrow and Penguin.
+
+· Requirement:
+
+o The Bird class should have a fly() method.
+
+o The Penguin class should not override fly(), as it cannot fly.
+
+o Refactor the design to avoid violating LSP.
+
+· Goal: Ensure that derived classes can substitute their base class without breaking functionality.
+
+
+Task 8: Interface Segregation Principle (ISP)
+
+· Scenario: Create an interface Worker with methods work() and eat().
+
+· Requirement:
+
+o Create two classes HumanWorker and RobotWorker.
+
+o Since robots don’t eat, refactor the interface to separate Workable and Eatable interfaces.
+
+· Goal: Ensure that classes do not depend on methods they do not use.
+
+
+Task 9: Dependency Inversion Principle (DIP)
+
+· Scenario: Create a Database class and a UserService class.
+
+· Requirement:
+
+o The UserService class should depend on an abstraction (an interface DatabaseInterface) rather than a concrete Database class.
+
+· Goal: Ensure that high-level modules do not depend on low-level modules
